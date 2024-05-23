@@ -15,7 +15,8 @@ jobs:
     strategy:
       fail-fast: false
 
-    runs-on: control@dashboard.operations.local.computer
+    # runs-on: control@dashboard.operations.local.computer
+    runs-on: ubuntu-latest
 
     steps:
 
