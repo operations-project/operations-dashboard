@@ -1,0 +1,15 @@
+servers:
+  vars:
+    # Put github users that should be sudo admins here.
+    operations_admin_users:
+      - jonpugh
+
+  children:
+
+    # Put it in the "runners" group to install DDEV and github runners.
+    runners:
+      hosts:
+        # Add each host you are using here.
+        # Match the host's FQDN. (hostname -f)
+        operations.local.computer:
+
