@@ -4,6 +4,11 @@ servers:
     operations_admin_users:
       - jonpugh
 
+    # To create runners, you need an API token with "admin" permissions.
+    # Don't set this variable in yaml files. Set it in CI using --extra-vars.
+    #   ansible-playbook --extra-vars github_runner_api_token=${{ secrets.OPERATIONS_GITHUB_RUNNER_TOKEN }}
+    github_runner_api_token: abcdefg
+
   children:
 
     # Put it in the "runners" group to install DDEV and github runners.
@@ -13,3 +18,14 @@ servers:
         # Match the host's FQDN. (hostname -f)
         operations.local.computer:
 
+sites:
+  hosts:
+    # Dashboard site
+    dashboard.operations.local.computer:
+      github_runner_repo: operations-project/operations-dashboard
+
+      # Run the runner in "control" user so it can sudo.
+      github_runner_user: "control"
+
+      # Make the site available at "/var/control/dashboard" for convenience
+      github_runner_site_symlink_directory: "/var/control/control.thinkdrop.net"
