@@ -22,6 +22,7 @@ jobs:
           pwd
           hostname 
           whoami
+          echo $PATH
 
       - name: Checkout codebase
         uses: actions/checkout@v4
