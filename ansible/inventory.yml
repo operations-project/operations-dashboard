@@ -22,6 +22,7 @@ sites:
   hosts:
     # Dashboard site
     dashboard.operations.local.computer:
+      github_runner_host: operations.local.computer
       github_runner_repo: operations-project/operations-dashboard
 
       # Run the runner in "control" user so it can sudo.
