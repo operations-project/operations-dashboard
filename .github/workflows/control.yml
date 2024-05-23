@@ -37,7 +37,8 @@ jobs:
 
       - name: Build codebase
         run: |
-          composer install --ignore-platform-reqs
+          ddev start
+          ddev composer install
 
       - name: Configure System
         run: |
