@@ -4,7 +4,8 @@ name: Configure Server
 on:
   workflow_dispatch:
   pull_request:
-
+  branch:
+    - main
 
 jobs:
   playbook:
