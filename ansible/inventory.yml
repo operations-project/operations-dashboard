@@ -30,3 +30,8 @@ sites:
 
       # Make the site available at "/var/control/dashboard" for convenience
       github_runner_site_symlink_directory: "/var/control/control.thinkdrop.net"
+
+    # ThinkDrop.net
+    thinkdrop.local.computer:
+      github_runner_host: operations.local.computer
+      github_runner_repo: thinkdrop/thinkdrop.net
