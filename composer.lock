@@ -2511,12 +2511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/operations-project/site-runner.git",
-                "reference": "4730f17c3c1cf70606cb0b9dd64e806e3966cd5a"
+                "reference": "b74de3b140cbab9051287076ce943c34d3565681"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/operations-project/site-runner/zipball/4730f17c3c1cf70606cb0b9dd64e806e3966cd5a",
-                "reference": "4730f17c3c1cf70606cb0b9dd64e806e3966cd5a",
+                "url": "https://api.github.com/repos/operations-project/site-runner/zipball/b74de3b140cbab9051287076ce943c34d3565681",
+                "reference": "b74de3b140cbab9051287076ce943c34d3565681",
                 "shasum": ""
             },
             "bin": [
@@ -2538,7 +2538,7 @@
                 "issues": "https://github.com/operations-project/site-runner/issues",
                 "source": "https://github.com/operations-project/site-runner/tree/feature/site-hosts"
             },
-            "time": "2024-05-23T18:03:37+00:00"
+            "time": "2024-05-23T18:13:11+00:00"
         },
         {
             "name": "pear/archive_tar",
