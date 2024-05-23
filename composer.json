@@ -1,12 +1,12 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 10 projects with Composer",
+    "name": "operations-project/operations-dashboard",
+    "description": "Project template for the Operations Dasbhoard.",
     "license": "GPL-2.0-or-later",
     "type": "project",
     "authors": [
         {
-            "name": "",
-            "role": ""
+            "name": "Jon Pugh",
+            "role": "author"
         }
     ],
     "require": {
