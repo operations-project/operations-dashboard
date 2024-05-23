@@ -17,6 +17,7 @@ jobs:
 
     # runs-on: control@dashboard.operations.local.computer
     runs-on: ubuntu-latest
+    container:  geerlingguy/docker-rockylinux8-ansible:latest
 
     steps:
 
