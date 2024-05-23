@@ -4,10 +4,6 @@ servers:
     operations_admin_users:
       - jonpugh
 
-    # To create runners, you need an API token with "admin" permissions.
-    # Don't set this variable in yaml files. Set it in CI using --extra-vars.
-    #   ansible-playbook --extra-vars github_runner_api_token=${{ secrets.OPERATIONS_GITHUB_RUNNER_TOKEN }}
-    github_runner_api_token: abcdefg
 
   children:
 
@@ -19,19 +15,25 @@ servers:
         operations.local.computer:
 
 sites:
-  hosts:
+  children:
     # Dashboard site
-    dashboard.operations.local.computer:
-      github_runner_host: operations.local.computer
-      github_runner_repo: operations-project/operations-dashboard
+    dashboard:
+      vars:
+        github_runner_repo: operations-project/operations-dashboard
+        github_runner_user: "control"
+        github_runner_api_token: lookup('ansible.builtin.env', 'OPERATIONS_API_TOKEN_DASHBOARD')
 
-      # Run the runner in "control" user so it can sudo.
-      github_runner_user: "control"
+      hosts:
+        dashboard.operations.local.computer:
+          github_runner_host: operations.local.computer
 
-      # Make the site available at "/var/control/dashboard" for convenience
-      github_runner_site_symlink_directory: "/var/control/control.thinkdrop.net"
+    # thinkdrop.net
+    thinkdrop:
+      vars:
+        github_runner_repo: thinkdrop/thinkdrop.net
+        github_runner_api_token: lookup('ansible.builtin.env', 'OPERATIONS_API_TOKEN_THINKDROP')
 
-    # ThinkDrop.net
-    thinkdrop.local.computer:
-      github_runner_host: operations.local.computer
-      github_runner_repo: thinkdrop/thinkdrop.net
+      hosts:
+        thinkdrop.local.computer:
+          github_runner_host: operations.local.computer
+

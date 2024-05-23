@@ -10,6 +10,10 @@ on:
 env:
   PATH: /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:./bin:./vendor/bin
 
+  # These are the two projects we have. We need an API key for each to create runners on separate repos.
+  OPERATIONS_GITHUB_API_TOKEN_DASHBOARD: ${{ secrets.OPERATIONS_GITHUB_API_TOKEN_DASHBOARD }}
+  OPERATIONS_GITHUB_API_TOKEN_THINKDROP: ${{ secrets.OPERATIONS_GITHUB_API_TOKEN_THINKDROP }}
+
 jobs:
   playbook:
     strategy:
