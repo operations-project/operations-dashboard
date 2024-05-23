@@ -21,6 +21,7 @@ jobs:
 
       - name: Build codebase
         uses: php-actions/composer@v6
+        command: install --ignore-platform-reqs
 
       - name: Configure System
         run: |
