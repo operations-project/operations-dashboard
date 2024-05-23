@@ -1,0 +1,25 @@
+# Runs operations/site-runner ansible playbook
+
+name: Configure Server
+on:
+  workflow_dispatch:
+  pull_request:
+
+
+jobs:
+  playbook:
+    strategy:
+      fail-fast: false
+
+    runs-on: control@dashboard.operations.local.computer
+
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v4
+
+      - name: Build codebase
+        uses: php-actions/composer@v6
+
+      - name: Configure System
+        run: |
+          ansible-playbook vendor/operations/site-runner/playbook.yml  --limit $(hostname -f),sites --connection local
