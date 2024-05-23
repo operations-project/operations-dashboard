@@ -32,9 +32,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build codebase
-        uses: php-actions/composer@v6
-        with:
-          command: install --ignore-platform-reqs
+        run: |
+          composer install --ignore-platform-reqs
 
       - name: Configure System
         run: |
