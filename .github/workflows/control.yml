@@ -16,6 +16,13 @@ jobs:
     runs-on: control@dashboard.operations.local.computer
 
     steps:
+
+      - name: Info
+        run: |
+          pwd
+          hostname 
+          whoami
+
       - name: Checkout codebase
         uses: actions/checkout@v4
 
@@ -24,11 +31,6 @@ jobs:
         with:
           command: install --ignore-platform-reqs
 
-      - name: Info
-        run: |
-          pwd
-          hostname 
-          whoami
       - name: Configure System
         run: |
           ansible-playbook vendor/operations/site-runner/playbook.yml  --limit $(hostname -f),sites --connection local
