@@ -16,7 +16,7 @@
         "drupal/core-recommended": "^10.2.0",
         "drush/drush": "^12.4.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "operations/site-runner": "main-dev",
+        "operations/site-runner": "dev-feature/site-hosts",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2"
     },

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16d5b744e8b1a7bd732ce49bf208e7a4",
+    "content-hash": "d9477a03da1fdecbb2a2ff45bf53a8d3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2507,19 +2507,21 @@
         },
         {
             "name": "operations/site-runner",
-            "version": "dev-main",
+            "version": "dev-feature/site-hosts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/operations-project/site-runner.git",
-                "reference": "381e83f658d5bcdf9cf1449a06b4bffe910309e0"
+                "reference": "053f5635af783322962194cc064fe84ec35e3bc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/operations-project/site-runner/zipball/381e83f658d5bcdf9cf1449a06b4bffe910309e0",
-                "reference": "381e83f658d5bcdf9cf1449a06b4bffe910309e0",
+                "url": "https://api.github.com/repos/operations-project/site-runner/zipball/053f5635af783322962194cc064fe84ec35e3bc8",
+                "reference": "053f5635af783322962194cc064fe84ec35e3bc8",
                 "shasum": ""
             },
-            "default-branch": true,
+            "bin": [
+                "scripts/server-verify-self"
+            ],
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2534,9 +2536,9 @@
             "homepage": "https://github.com/operations-project/site-runner",
             "support": {
                 "issues": "https://github.com/operations-project/site-runner/issues",
-                "source": "https://github.com/operations-project/site-runner/tree/main"
+                "source": "https://github.com/operations-project/site-runner/tree/feature/site-hosts"
             },
-            "time": "2024-05-21T20:49:55+00:00"
+            "time": "2024-05-23T16:21:43+00:00"
         },
         {
             "name": "pear/archive_tar",
