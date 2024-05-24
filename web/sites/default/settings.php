@@ -45,6 +45,8 @@ try {
 
   // Set database and username to new values.
   $databases['default']['default']['database'] = $database;
+
+  // @TODO: This is setting username and password to ROOT. Figure out why GRANT isn't working.
   $databases['default']['default']['username'] = $username;
   $databases['default']['default']['password'] = $password;
 
