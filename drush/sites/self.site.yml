@@ -12,3 +12,9 @@
 #  user: www-admin
 #  root: /path/to/drupal
 #  uri: http://stage.example.com
+
+# Access any site with the domain as an alias:
+# drush @testing.booster.local.computer
+"*":
+  uri: "${env-name}"
+  root: web
