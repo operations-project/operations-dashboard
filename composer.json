@@ -14,6 +14,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^10.2.0",
         "drupal/core-recommended": "^10.2.0",
+        "drupal/site": "2.x-dev",
         "drush/drush": "^12.4.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "operations/site-runner": "dev-feature/site-hosts",
