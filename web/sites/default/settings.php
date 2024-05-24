@@ -32,14 +32,14 @@ $operations_domain = 'https://operations.' . $base_domain;
 
 // Create database based on hostname.
 $database = strtr($_SERVER['HTTP_HOST'], ['.' => '']);
-$hostname = $databases['default']['default']['host'];
+$database_hostname = $databases['default']['default']['host'];
 $username = 'root';
 $password = 'root';
 
 $new_username = $databases['default']['default']['username'];
 
 try {
-  $conn = new PDO("mysql:host=$hostname;", $username, $password);
+  $conn = new PDO("mysql:host=$database_hostname;", $username, $password);
   $conn->query("CREATE DATABASE IF NOT EXISTS {$database} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;");
   $conn->query("GRANT ALL ON $database.* TO '$new_username'@'%' IDENTIFIED BY '$password'");
 
