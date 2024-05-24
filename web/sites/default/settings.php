@@ -53,4 +53,11 @@ try {
   // If unable to create or grant, don't change anything.
 
 }
+$site = $_SERVER['HTTP_HOST'];
+$settings['config_sync_directory'] = '../config/' . $site . '/sync';
+$settings['file_public_path'] = 'files/' . $site;
+$settings['file_private_path'] = '../private/' . $site;
+$settings['file_temp_path'] = '/tmp/';
 
+#make sure this is different for every site using this codebase.
+$settings['hash_salt'] .= $site . $environment;
